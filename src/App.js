@@ -1,6 +1,8 @@
+import React from "react";
 import Expenses
- from "./components/Expenses";
-function App() {
+ from "./components/Expenses/Expenses";
+
+const App = () => {
   const expenses = [
     {
       id: 'e1',
@@ -23,8 +25,17 @@ function App() {
     },
   ];
 
+  // JSX syntax will be converted into the following syntax
+  // return React.createElement(  
+  //   'div', 
+  //    {}, 
+  //   React.createElement('h2', {}, 'Let\'s get started'),
+  //   React.createElement(Expenses, {items: expenses})
+  // );
+
   return (
     <div>
+          <h2>Let's get started</h2>
           <Expenses items={expenses}/>
     </div>
   );
